@@ -1,0 +1,14 @@
+<header class="site-header">
+    <div class="left-section">
+        <a class="site-title" href="{{ site.BaseURL }}">{{ site.Title }}</a>
+    </div>
+    <div class="right-section">
+        <nav class="site-menu">
+            {{- $currentPage := . -}}
+            {{ range .Site.Menus.main -}}
+                <a class="site-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            {{- end }}
+        </nav>
+    </div>
+</header>
+
