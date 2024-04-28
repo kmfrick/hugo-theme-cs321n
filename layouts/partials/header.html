@@ -1,8 +1,13 @@
 <header class="site-header">
-    <div class="left-section">
+    <div class="header-section">
+      {{ if .Site.Params.Logo.path }}
+            <img src="{{ .Site.Params.Logo.path }}" alt="{{ .Site.Params.Logo.alt }}" style="height: auto; width: 10em;"/>
+        {{ end }}
+    </div>
+    <div class="header-section">
         <a class="site-title" href="{{ site.BaseURL }}">{{ site.Title }}</a>
     </div>
-    <div class="right-section">
+    <div class="header-section">
         <nav class="site-menu">
             {{- $currentPage := . -}}
             {{ range .Site.Menus.main -}}
