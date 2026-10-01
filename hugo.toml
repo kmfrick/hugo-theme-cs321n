@@ -1,5 +1,5 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'My New Hugo Site'
 
 [[menus.main]]
@@ -20,4 +20,4 @@ weight = 30
 [module]
   [module.hugoVersion]
     extended = false
-    min = "0.116.0"
+    min = "0.158.0"
